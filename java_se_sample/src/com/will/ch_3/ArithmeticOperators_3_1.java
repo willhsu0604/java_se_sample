@@ -27,6 +27,10 @@ public class ArithmeticOperators_3_1 {
 		int f = c + d;
 		System.out.println("c + d = " + f);
 		
+		// 小數點計算不精確
+		double d1 = 0.1;
+		double d2 = 0.1;
+		System.out.println("d1 + d2 = " + (d1 + d2));
 	}
 	
 }
