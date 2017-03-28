@@ -9,7 +9,7 @@ public class ShiftOperators_3_1 {
 		System.out.println("a >> 1 : " + Integer.toBinaryString(a));
 		System.out.println("a = " + a);
 		a = a << 2;
-		System.out.println("a >> 1 : " + Integer.toBinaryString(a));
+		System.out.println("a << 2 : " + Integer.toBinaryString(a));
 		System.out.println("a = " + a);
 		
 		int b = 1;
