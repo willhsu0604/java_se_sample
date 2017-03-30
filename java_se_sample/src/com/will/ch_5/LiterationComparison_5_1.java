@@ -6,7 +6,7 @@ public class LiterationComparison_5_1 {
 		
 		System.out.println("for loop");
 		int sum = 0;
-		int count = 1;
+		int count;
 		for (count = 1; count <= 10; count++) {
 			sum += count;
 		}

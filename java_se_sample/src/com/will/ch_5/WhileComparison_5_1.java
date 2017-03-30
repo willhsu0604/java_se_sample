@@ -7,8 +7,8 @@ public class WhileComparison_5_1 {
 		System.out.println("While-Do");
 		int i = 100;
 		while (i <= 10) {
-			System.out.println(i);
-			i--;
+		  System.out.println(i);
+		  i--;
 		}
 		
 		System.out.println();
@@ -16,9 +16,10 @@ public class WhileComparison_5_1 {
 		System.out.println("Do-While");
 		int j = 100;
 		do {
-			System.out.println(j);
-			j--;
+		  System.out.println(j);
+		  j--;
 		} while (j <= 10);
+
 		System.out.println("至少會跑一次");
 		
 		System.out.println();
