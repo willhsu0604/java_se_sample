@@ -18,6 +18,20 @@ public class Literal_3_4 {
 		char j = 'A';
 		char k = '\u0041';
 		
+		// char
+		System.out.println("a => " + 'a');
+		System.out.println("我 => " + '我');
+		
+		// 轉義序列
+		System.out.println("單引號 => " + '\'');
+		System.out.println("雙引號 => " + '\"');
+		System.out.println("反斜線 => " + '\\');
+		System.out.println("換行 => " + '\n');
+		System.out.println("tab鍵 => " + '\t');
+		System.out.println("倒退一格 => " + '\b');
+		System.out.println("換頁 => " + '\f');
+		System.out.println("return鍵 (Enter鍵) => " + '\r');
+		
 	}
 	
 }
