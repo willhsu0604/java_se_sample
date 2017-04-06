@@ -1,6 +1,6 @@
 package com.will.ch_6;
 
-public class Student_test_6_2 {
+public class Overloading_6_2 {
 	
 	public static void printlnInt(int i) {
 		System.out.println(i);
