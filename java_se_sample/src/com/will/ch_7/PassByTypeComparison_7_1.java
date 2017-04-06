@@ -21,9 +21,9 @@ public class PassByTypeComparison_7_1 {
 		
 		Pen pen = new Pen();
 		pen.price = 10;
-		System.out.println("Before calling testPassByValue, pen.price = " + pen.price);
+		System.out.println("Before calling testPassByReference, pen.price = " + pen.price);
 		testPassByReference(pen);
-		System.out.println("After calling testPassByValue, pen.price = " + pen.price);
+		System.out.println("After calling testPassByReference, pen.price = " + pen.price);
 		
 	}
 }
