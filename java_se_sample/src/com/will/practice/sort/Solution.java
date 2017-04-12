@@ -22,39 +22,33 @@ public class Solution {
 	public static void main(String[] args) {
 		
 		Method method = new Method();
-		ListNode head = new ListNode(1);
-		head.next = new ListNode(2);
-		head.next.next = new ListNode(3);
-		int n = method.removeDuplicates(new int[]{1, 2, 3, 4, 5, 6, 6, 7, 8, 7});
+		int n = method.searchInsert(new int[]{1,3}, 2);
 		System.out.println(n);
 	}
 }
 
 class Method {
 	
-	public int removeDuplicates(int[] nums) {
-        Set<Integer> set = new HashSet<>();
-        int originalLength = nums.length;
-        int sourceIndex = 0;
-        int targetIndex = 0;
-        while(sourceIndex < originalLength) {
-            while(sourceIndex < originalLength && set.contains(nums[sourceIndex])) {
-                sourceIndex++;
+	public int searchInsert(int[] nums, int target) {
+        if(nums.length == 0 || nums[0] > target) return 0;
+		if(nums[nums.length - 1] < target) return nums.length;
+		
+		int low = 0, high = nums.length - 1;
+        while(low < high && low < nums.length-1 && high > 0) {
+            int middle = (high + low)/2;
+            if(high == low + 1 && nums[high] > target && nums[low] < target) {
+            	low = middle+1;
+            	break;
+            } else if(nums[middle] == target) {
+                low = middle;
+                break;
+            } else if (nums[middle] > target) {
+                high = middle;
+            } else {
+                low = middle+1;
             }
-            if(sourceIndex == originalLength) {
-        		break;
-        	}
-            if(sourceIndex != targetIndex) {
-                nums[targetIndex] = nums[sourceIndex];
-            }
-            if(!set.contains(nums[sourceIndex])) {
-               set.add(nums[sourceIndex]);
-            }
-            targetIndex++;
-            sourceIndex++;
         }
-        nums = Arrays.copyOfRange(nums, 0, targetIndex);
-        return nums.length;
+        return low;
     }
 	
 }

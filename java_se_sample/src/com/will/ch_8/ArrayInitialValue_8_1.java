@@ -29,7 +29,7 @@ public class ArrayInitialValue_8_1 {
 		System.out.println("array7[0] == '\u0000' => " + (array7[0] == '\u0000'));
 		
 		Pen[] array8 = new Pen[1];
-		System.out.println("char initial value: " + array8[0]);
+		System.out.println("Pen initial value: " + array8[0]);
 		
 	} 
 
