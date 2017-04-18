@@ -15,7 +15,7 @@ public class TypeCasting_10_1 {
 		System.out.println("e2 instanceof PartTimeEmployee: " + (e2 instanceof PartTimeEmployee));
 		
 		FullTimeEmployee f = (FullTimeEmployee)e1;
-		//PartTimeEmployee p1 = (PartTimeEmployee)e1; // 執行時會發生 java.lang.ClassCastException
+//		PartTimeEmployee p1 = (PartTimeEmployee)e1; // 執行時會發生 java.lang.ClassCastException
 		PartTimeEmployee p = (PartTimeEmployee)e2;
 //		FullTimeEmployee f1 = (FullTimeEmployee)e2;
 		

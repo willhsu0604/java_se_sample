@@ -11,7 +11,6 @@ public class VarargsAppendString_8_1 {
 	}
 	
 	public static void main(String[] args) {
-		
 		System.out.println(append("c", "a", "t"));
 		System.out.println(append("h", "e", "l", "l", "o"));
 		
