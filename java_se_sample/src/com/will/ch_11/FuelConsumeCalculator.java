@@ -10,8 +10,4 @@ public class FuelConsumeCalculator {
 		System.out.println("共消耗" + car.getTotalDistance()/1000 * fuelAmountEveryKM + "公升的油");
 	}
 	
-	public static void cal(FuelMachine fuelMachine, double fuelAmountEveryKM) {
-		System.out.println("共消耗" + fuelMachine.getFuelAmountEveryKM() * fuelMachine.getTotalDistanceInKm()  + "公升的油");
-	}
-
 }

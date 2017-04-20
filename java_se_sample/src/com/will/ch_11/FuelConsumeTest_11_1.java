@@ -14,10 +14,10 @@ public class FuelConsumeTest_11_1 {
 		// Low Dependency
 		FiighterFuelMachine fiighter2 = new FiighterFuelMachine();
 		fiighter2.fly(8329);
-		FuelConsumeCalculator.cal(fiighter2, 3.0);
+		FuelConsumeCalculator2.cal(fiighter2, 3.0);
 		TruckFuelMachine truck2 = new TruckFuelMachine();
 		truck2.move(9800);
-		FuelConsumeCalculator.cal(truck2, 3.0);
+		FuelConsumeCalculator2.cal(truck2, 3.0);
 
 	}
 
