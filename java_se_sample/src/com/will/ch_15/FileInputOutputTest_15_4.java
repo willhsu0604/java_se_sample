@@ -1,37 +1,39 @@
 package com.will.ch_15;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Arrays;
+import java.io.PrintStream;
 
-public class FileInputStreamFileOutputStreamTest_15_2 {
+public class FileInputOutputTest_15_4 {
 
 	public static void main(String[] args) {
-		// 每次讀b變數陣列長度的copy方式
+		// PrintStream
 		File baseDir = new File(System.getProperty("user.dir"));
-		File sourceFile = new File(baseDir, "./resource/java.png");
-		File destFile = new File(baseDir, "./resource/java_copy.png");
-		FileInputStream fis = null;
+		File destFile = new File(baseDir, "./resource/printStreamTest.txt");
 		FileOutputStream fos = null;
-		int size = 100;
-		byte[] b = new byte[size];
+		BufferedOutputStream bos = null;
+		PrintStream ps = null;
 		try {
 			if(destFile.exists()) {
 				destFile.delete();
 			}
-			fis = new FileInputStream(sourceFile);
 			fos = new FileOutputStream(destFile);
-			while(fis.read(b) != -1) {
-				fos.write(b);
-			}
+			bos = new BufferedOutputStream(fos);
+			ps = new PrintStream(bos);
+			ps.print("Hello World");
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
-			if(fis != null) {
+			if(ps != null) {
+				ps.close();
+			}
+			if(bos != null) {
 				try {
-					fis.close();
+					bos.close();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -48,3 +50,4 @@ public class FileInputStreamFileOutputStreamTest_15_2 {
 	}
 
 }
+

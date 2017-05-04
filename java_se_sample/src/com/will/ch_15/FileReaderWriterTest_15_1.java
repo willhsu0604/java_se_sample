@@ -5,10 +5,9 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileReaderFileWriterTest_15_1 {
+public class FileReaderWriterTest_15_1 {
 
 	public static void main(String[] args) {
-		// 每次讀取一個字元，直到全部讀取完
 		File baseDir = new File(System.getProperty("user.dir"));
 		File sourceFile = new File(baseDir, "./resource/english.txt");
 		File destFile = new File(baseDir, "./resource/english_copy.txt");
