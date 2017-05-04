@@ -11,9 +11,5 @@ public class Truck extends Car {
 	public void setGoodsAmount(int goodsAmount) {
 		this.goodsAmount = goodsAmount;
 	}
-	
-	public double getFuelAmountEveryKM() {
-		return 0.3;
-	}
 
 }
