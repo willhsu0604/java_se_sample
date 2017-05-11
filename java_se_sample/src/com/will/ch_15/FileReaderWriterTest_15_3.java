@@ -1,9 +1,7 @@
 package com.will.ch_15;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -23,7 +21,7 @@ public class FileReaderWriterTest_15_3 {
 			fw = new FileWriter(destFile);
 			bw = new BufferedWriter(fw);
 			pw = new PrintWriter(bw);
-			pw.println("Hello World");
+			pw.println("中文");
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
