@@ -23,7 +23,7 @@ public class ThreadPriorityTest_17_1 {
 		}).start();
 		
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(1002);
 			System.out.println("Max priority count: " + priorityCount[2] + ", Normal priority count: " + priorityCount[1] + ", Min priority count: " + priorityCount[0]);
 			System.exit(0);
 		} catch (InterruptedException e1) {
@@ -43,6 +43,11 @@ class PriorityThread extends Thread {
 	
 	public void run() {
 		while(true) {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 			Thread.yield();
 			ThreadPriorityTest_17_1.priorityCount[priority/5].getAndIncrement();
 		}

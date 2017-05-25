@@ -11,7 +11,7 @@ public class SynchronizationTest_17_1 {
 					int num = count.num;
 					try {
 						Thread.sleep(1000);
-						System.out.println(count);
+						System.out.println(count.num);
 						count.num = num+1; 
 					} catch (InterruptedException e) {
 						e.printStackTrace();
