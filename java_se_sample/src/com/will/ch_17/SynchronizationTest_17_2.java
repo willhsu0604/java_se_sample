@@ -1,25 +1,18 @@
 package com.will.ch_17;
 
-public class SynchronizationTest_17_1 {
-	
-	private static boolean lock = false;
+public class SynchronizationTest_17_2 {
 	
 	public static void main(String[] args) throws InterruptedException {
-		LockCounter counter = new LockCounter();
+		Counter counter = new Counter();
 		for(int i = 0; i < 3;  i++) {
 			new Thread(new Runnable() {
 				@Override
 				public void run() {
 					try {
-						while(lock) {
-							Thread.sleep(10);
-						}
-						lock = true;
 						int num = counter.num;
 						Thread.sleep(1000);
 						System.out.println(num);
 						counter.num = num+1;
-						lock = false;
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
@@ -32,6 +25,6 @@ public class SynchronizationTest_17_1 {
 
 }
 
-class LockCounter {
+class Counter {
 	public int num = 0;
 }
